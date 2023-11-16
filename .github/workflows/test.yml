@@ -1,0 +1,12 @@
+name: Make image interlace
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  createImageInterlacePR:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hanhan9449/img-interlace-action
+          
