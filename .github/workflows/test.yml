@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: run shell script to make image interlace
-        run: cd scripts && ./image-interlace.sh
+        run: echo Date > hello
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
