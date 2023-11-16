@@ -9,5 +9,5 @@ jobs:
   createImageInterlacePR:
     runs-on: ubuntu-latest
     steps:
-      - uses: hanhan9449/img-interlace-action@6ce94870ac2d9986c5038180ebe7622786fc827f
+      - uses: hanhan9449/img-interlace-action@main
           
