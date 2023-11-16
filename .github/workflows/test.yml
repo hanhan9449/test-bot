@@ -2,7 +2,6 @@ name: Make image interlace
 on:
   push:
     branches:
-      - master
       - main
 
 jobs:
@@ -10,7 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: hanhan9449/img-interlace-action@main
+      - name: run shell script to make image interlace
+        run: cd scripts && ./image-interlace.sh
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
@@ -18,4 +18,3 @@ jobs:
           title: "[AutoCreate]使图片交错 make image interlace"
           body: "图片交错编码，能够更快的下载展示"
           branch: autocreate/image-interlace
-          
